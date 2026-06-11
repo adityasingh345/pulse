@@ -1,0 +1,29 @@
+# API framework
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+
+# Database ORM
+sqlalchemy==2.0.30
+asyncpg==0.29.0          # async PostgreSQL driver
+
+# Migrations
+alembic==1.13.1
+
+# Supabase
+supabase==2.4.6
+
+# Background jobs
+celery==5.4.0
+redis==5.0.4
+
+# HTTP client for workers (async)
+httpx==0.27.0
+
+# Config management
+pydantic-settings==2.2.1  # reads .env into typed config
+
+# Email
+sendgrid==6.11.0
+
+# Utilities
+python-dotenv==1.0.1
