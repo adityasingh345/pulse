@@ -32,11 +32,15 @@ async def create_endpoint(
 
 async def get_user_endpoints(
         db: AsyncSession,
-        user_id: UUID
+        user_id: UUID,
+        limit: int = 20,
+    offset: int = 0,
 ) -> list[Endpoint]:
-    stmt = select(Endpoint).where(
+    stmt = (select(Endpoint).where(
         Endpoint.user_id == user_id
+    ).limit(limit).offset(offset)
     )
+    
     result = await db.execute(stmt)
 
     return result.scalars().all()
