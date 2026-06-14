@@ -4,7 +4,7 @@ from app.database import Base
 import uuid
 from sqlalchemy.dialects.postgresql import UUID
 from datetime import datetime, timezone
-
+#check
 class Endpoint(Base):
     __tablename__= "endpoints"
 
